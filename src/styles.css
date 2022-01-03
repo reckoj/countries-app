@@ -1,0 +1,126 @@
+.main-container {
+	padding: 4rem;
+	margin: 2rem;
+	margin-top: -3rem;
+}
+
+.article-container {
+}
+
+.country-image {
+	max-width: 18rem;
+	max-height: 18rem;
+	margin-right: 8rem;
+}
+
+.country-details {
+}
+
+.main-container article .country-details div {
+	margin-inline: 0;
+	margin-block: 1rem;
+	padding-block: 1rem;
+}
+
+.main-container article .country-details div h1 {
+	margin-bottom: 1.5rem;
+	margin-top: -1rem;
+	font-family: 'Nunito Sans';
+	color: var(--Maintext-dark-color);
+	font-weight: 600;
+	font-size: 28px;
+}
+
+.main-container article .country-details div h4 {
+	padding-block: 0.2rem;
+	font-family: 'Nunito Sans';
+	color: var(--Maintext-dark-color);
+	letter-spacing: 1px;
+	font-weight: 600;
+}
+
+.main-container article .country-details div h4 span {
+	color: var(--toggleText-color);
+	font-size: small;
+	font-weight: normal;
+	letter-spacing: 2px;
+}
+
+div h3 {
+	padding-block: 0.2rem;
+	font-family: 'Nunito Sans';
+	color: var(--Maintext-dark-color);
+	letter-spacing: 1px;
+	font-weight: 600;
+}
+
+ul {
+	display: flex;
+	background-color: var(--lightDark-bg-color);
+	padding: 2px 20px;
+	list-style-type: none;
+	border-radius: 2px;
+	box-shadow: 0 5px 20px hsla(200, 15%, 8%, 0.5);
+	margin: 5px 10px 0 0;
+}
+div ul li {
+	font-family: 'Nunito Sans';
+	color: var(--Maintext-dark-color);
+	font-size: 10px;
+}
+.border-styles {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* @media (min-width: 40rem) {
+	
+
+	
+}
+
+@media (min-width: 48) {
+	
+} */
+
+@media (min-width: 64rem) {
+	.main-container article .inner-article {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 900px;
+		gap: 3rem;
+	}
+	.country-details {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.border-styles {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	div h3 {
+		margin-top: 2rem;
+		text-align: center;
+	}
+}
+
+@media (min-width: 1200px) {
+	.main-container {
+		max-width: 1100px;
+	}
+}
+
+@media (min-width: 1366) {
+	.main-container {
+		max-width: 1200px;
+	}
+}
+@media (min-width: 1400px) {
+	.main-container {
+		max-width: 1400px;
+	}
+}

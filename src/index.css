@@ -1,13 +1,234 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+:root {
+	--lightDark-bg-color: #283743;
+	--darkBody-bg-color: #202d36;
+	--lightBody-bg-color: #f1f1f1;
+	--Maintext-dark-color: #ffffff;
+	--Maintext-lightMode-color: #0e0d0d;
+	--toggleText-color: #d3d1d1;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+[data-theme='dark'] {
+	--background: black;
+	--text-primary: white;
+	--text-secondary: grey;
 }
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+		'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Nunito Sans', sans-serif;
+	/* padding: 1.25rem; */
+	background-color: var(--darkBody-bg-color);
+	overflow-x: hidden;
+}
+
+/* body.light-theme {
+	background-color: var(--lightBody-bg-color);
+	color: var(--Maintext-lightMode-color);
+} */
+
+/*
+  Header component 
+*/
+.headerContainer {
+	background-color: var(--lightDark-bg-color);
+	height: 4rem;
+	position: relative;
+	box-shadow: 0 5px 20px hsla(200, 15%, 8%, 0.5);
+	display: flex;
+	justify-content: space-between;
+	padding-inline: 3rem;
+	align-items: center;
+}
+
+.headerText {
+	display: flex;
+	font-family: 'Nunito Sans';
+	color: var(--Maintext-dark-color);
+}
+
+.button {
+	display: flex;
+	font-family: 'Nunito Sans';
+	font-size: x-small;
+	color: var(--toggleText-color);
+}
+
+button {
+	padding-inline: 1rem;
+	background-color: #283743;
+	border: none;
+	color: var(--toggleText-color);
+	padding: 5px;
+	font-size: 15px;
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: var(--darkBody-bg-color);
+	border-radius: 2px;
+	font-size: 14px;
+}
+
+/*
+* Styling seachbar component
+*
+*/
+
+.SeachBarContainer {
+	display: flex;
+	justify-content: space-between;
+	margin-block: 3rem;
+	margin-left: 3rem;
+	flex-direction: column;
+	/* width: 30rem; */
+}
+
+form {
+	margin-bottom: 1rem;
+	width: 90%;
+}
+input {
+	background-color: var(--lightDark-bg-color);
+	color: var(--Maintext-dark-color);
+	height: 3rem;
+	width: 100%;
+	padding-left: 3rem;
+	font-family: 'Nunito Sans';
+	border: none;
+	border-radius: 5px;
+	letter-spacing: 0.5px;
+	margin-bottom: 1.5rem;
+}
+
+input::placeholder {
+	color: var(--Maintext-dark-color);
+}
+
+.selectBox {
+	background-color: var(--lightDark-bg-color);
+	color: var(--Maintext-dark-color);
+	height: 3rem;
+	padding-left: 1rem;
+	font-family: 'Nunito Sans';
+	border: none;
+	border-radius: 5px;
+	display: flex;
+	width: 12rem;
+	margin-right: 9rem;
+}
+
+/*
+  Starting the body
+
+
+
+*/
+/* .div-image {
+	height: auto;
+	width: 20rem;
+} */
+
+article {
+	margin: auto;
+}
+
+.images {
+	border-radius: 0.313rem 0.313rem 0 0;
+	width: 15rem;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2.5rem;
+	margin: 4rem;
+	margin-left: 2rem;
+}
+
+.details {
+	background-color: var(--lightDark-bg-color);
+	width: 15rem;
+	height: 15rem;
+	margin-top: -0.5rem;
+	padding: 1.25rem;
+	border-radius: 0 0 0.313rem 0.313rem;
+}
+
+/* .details h1 {
+	padding-block: 1rem;
+	color: var(--Maintext-dark-color);
+	font-family: 'Nunito Sans';
+	cursor: pointer;
+	
+} */
+.grid .details h3 {
+	color: var(--Maintext-dark-color);
+	font-family: 'Nunito Sans';
+	padding-bottom: 0.625;
+	font-size: small;
+	margin-block: 1rem;
+}
+
+.grid .details h3 span {
+	font-size: small;
+	font-weight: 100;
+	font-family: 'Nunito Sans';
+}
+
+@media (min-width: 40rem) {
+	form {
+		width: 35%;
+		margin-left: 2rem;
+	}
+	.SeachBarContainer {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 48) {
+	.grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media (min-width: 62rem) {
+	.grid {
+		grid-template-columns: repeat(4, 1fr);
+		gap: 2.5rem;
+	}
+}
+@media (min-width: 64rem) {
+	.grid {
+		grid-template-columns: repeat(4, 1fr);
+		gap: 2.5rem;
+	}
+}
+
+/**
+*
+Country page Styles
+*
+*
+*/
+
+/* @media (min-width: 40rem) {
+	.headerContainer {
+		display: flex;
+		justify-content: space-between;
+		padding-inline: -1rem;
+		align-items: center;
+	}
+} */
